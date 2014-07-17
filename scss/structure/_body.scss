@@ -1,0 +1,11 @@
+body {
+    @include mq($from:desktop){
+        float: none;
+        margin:0 auto;
+        max-width: 1200px;
+    }
+}
+
+body>:not(script) {
+    @extend %allElements;
+}

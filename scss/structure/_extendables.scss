@@ -1,0 +1,26 @@
+%standardBits {
+    float:left;
+    clear: left;
+    display: block;
+}
+
+%allElements {
+    @extend %standardBits;
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 2em;    
+}
+
+@mixin allBlocks {
+    @extend %allElements;
+    margin-bottom: 2em;
+    height: 0;
+    padding-bottom: 40%;
+    background-color: aqua;
+    @include mq($from:tablet){
+        width: 42.5%;
+        margin-left: 5%;
+        clear: none;
+        padding-bottom: 20%;
+    }
+}
